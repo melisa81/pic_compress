@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* 上传区域样式 */
+.upload-area {
+    background: #fff;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: border-color 0.3s;
+}
+
+.upload-area:hover {
+    border-color: #666;
+}
+
+.upload-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.upload-icon {
+    fill: #666;
+    margin-bottom: 20px;
+}
+
+.upload-hint {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* 图片对比区域样式 */
+.image-comparison {
+    display: none; /* 初始隐藏 */
+    grid-template-columns: 1fr 1fr; /* 强制两列布局 */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.image-comparison.active {
+    display: grid;
+}
+
+.image-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container {
+    display: none;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.preview-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.quality-control {
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.info {
+    margin: 15px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* 拖拽状态样式 */
+.upload-area.drag-over {
+    border-color: #007bff;
+    background: rgba(0, 123, 255, 0.05);
+}
+
+h1 {
+    font-weight: 500;
+    color: #1d1d1f;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.compression-controls {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="range"] {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 4px;
+    background: #007aff;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #007aff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.download-btn {
+    background: #007aff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #0066d6;
+    transform: translateY(-1px);
+} 

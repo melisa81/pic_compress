@@ -63,15 +63,23 @@ class ImageCompressor {
     }
 
     async processFile(file) {
+        // 1. 先显示容器
+        const comparisonContainer = document.querySelector('.comparison-container');
+        comparisonContainer.style.display = 'grid';  // 直接设置display为grid
+        
         this.originalFile = file;
         this.originalSize.textContent = this.formatFileSize(file.size);
         
+        // 2. 创建并读取文件
         const reader = new FileReader();
         reader.onload = (e) => {
+            // 3. 设置原始图片
             this.originalImage.src = e.target.result;
             this.originalImage.onload = () => {
+                // 4. 设置图片尺寸信息
                 this.originalDimensions.textContent = 
                     `${this.originalImage.naturalWidth} × ${this.originalImage.naturalHeight}`;
+                // 5. 压缩图片
                 this.compressImage();
             };
         };
